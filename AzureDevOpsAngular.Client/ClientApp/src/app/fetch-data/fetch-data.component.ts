@@ -9,8 +9,8 @@ export class FetchDataComponent {
   public forecasts: WeatherForecast[];
 
   public Products: Product[];
-  private ProductURL = "https://localhost:44300/api/Product"; //Entorno Local
-  //private ProductURL = "  https://azuredevopsangularapi.azurewebsites.net/api/Product"; //Entorno Azure
+  //private ProductURL = "https://localhost:44300/api/Product"; //Entorno Local
+  private ProductURL = "  https://azuredevopsangularapi.azurewebsites.net/api/Product"; //Entorno Azure
 
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
