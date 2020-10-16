@@ -1,24 +1,26 @@
 <h1 id="tableLabel">Weather forecast</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>This component demonstrates fetching Products from the server.</p>
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Products">
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
+      <th>ProductId</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Created</th>
+      <th>Updated</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
+    <tr *ngFor="let Product of Products">
+      <td>{{ Product.ProductId }}</td>
+      <td>{{ Product.Description }}</td>
+      <td>{{ Product.Price }}</td>
+      <td>{{ Product.Created }}</td>
+      <td>{{ Product.Updated }}</td>
     </tr>
   </tbody>
 </table>
